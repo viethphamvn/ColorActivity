@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] colors = {"CYAN","BLUE","RED"};
+        String[] colors = {"CYAN","BLUE","RED","BLACK","GRAY","GREEN","MAGENTA","WHITE","YELLOW","PURPLE"};
 
         Spinner colorSpinner = findViewById(R.id.colorSpinner);
         ColorAdapter myAdapter = new ColorAdapter(this, colors.length, colors);
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                ConstraintLayout myLayout = findViewById(R.id.activityLayout);
+                myLayout.setBackgroundColor(Color.WHITE);
             }
         });
     }
