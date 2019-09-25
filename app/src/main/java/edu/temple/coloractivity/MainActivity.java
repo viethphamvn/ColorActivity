@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
                 ConstraintLayout myLayout = findViewById(R.id.activityLayout);
                 TextView textView = (TextView) view;
                 myLayout.setBackgroundColor(Color.parseColor(textView.getText().toString()));
+
+                TextView banner = findViewById(R.id.textView);
+                if (textView.getText().toString().equals("WHITE")){
+                    banner.setTextColor(Color.BLACK);
+                } else {
+                    banner.setTextColor(Color.WHITE);
+                }
             }
 
             @Override
