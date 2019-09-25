@@ -50,4 +50,20 @@ public class ColorAdapter extends BaseAdapter {
         textView.setBackgroundColor(Color.WHITE);
         return textView;
     }
+
+    @Override
+    public View getDropDownView(int i, View convertView, ViewGroup parent){
+        TextView textView;
+
+        if (convertView instanceof View){
+            textView = (TextView) convertView;
+        } else {
+            textView = new TextView(context);
+        }
+        textView.setTextSize(50);
+        textView.setTextColor(Color.BLACK);
+        textView.setText(colors[i]);
+        textView.setBackgroundColor(Color.parseColor(textView.getText().toString()));
+        return textView;
+    }
 }
