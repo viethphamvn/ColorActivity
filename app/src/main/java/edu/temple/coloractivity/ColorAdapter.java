@@ -44,7 +44,7 @@ public class ColorAdapter extends BaseAdapter {
         } else {
             textView = new TextView(context);
         }
-        textView.setTextSize(50);
+        textView.setTextSize(40);
         textView.setTextColor(Color.BLACK);
         textView.setText(colors[i]);
         textView.setBackgroundColor(Color.WHITE);
@@ -60,7 +60,7 @@ public class ColorAdapter extends BaseAdapter {
         } else {
             textView = new TextView(context);
         }
-        textView.setTextSize(50);
+        textView.setTextSize(40);
         textView.setTextColor(Color.BLACK);
         textView.setText(colors[i]);
         textView.setBackgroundColor(Color.parseColor(textView.getText().toString()));
